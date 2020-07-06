@@ -10,6 +10,12 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Wanna give acess to your gallery?</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Wanna give acess to your camera?</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Wanna give acess to your microphone?</string>
 	<key>CFBundleName</key>
 	<string>snap_it</string>
 	<key>CFBundlePackageType</key>
