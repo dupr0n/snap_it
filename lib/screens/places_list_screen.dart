@@ -45,7 +45,7 @@ class PlacesListScreen extends StatelessWidget {
                             builder: (ctx) => AlertDialog(
                               title: Text('Are you sure?'),
                               content: Text(
-                                  'This action will remove this snap from your places'),
+                                  'This action will remove this snap from Snap It!'),
                               actions: <Widget>[
                                 FlatButton(
                                   child: Text('No'),
