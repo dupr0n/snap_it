@@ -11,6 +11,8 @@ class GreatPlaces with ChangeNotifier {
 
   List<Place> get items => [..._items];
 
+  Place findById(String id) => _items.firstWhere((item) => item.id == id);
+
   Future<void> addPlace(String title, File image, PlaceLocation loc) async {
     final address =
         await LocationHelper.getPlaceAddress(loc.latitude, loc.longitude);
@@ -27,7 +29,7 @@ class GreatPlaces with ChangeNotifier {
     );
     _items.add(newPlace);
     notifyListeners();
-    DBHelper.insert(DBHelper.tableName, {
+    DBHelper.insert({
       'id': newPlace.id,
       'title': newPlace.title,
       'image': newPlace.image.path,
@@ -35,6 +37,12 @@ class GreatPlaces with ChangeNotifier {
       'loc_lng': newPlace.location.longitude,
       'address': newPlace.location.address,
     });
+  }
+
+  Future<void> removePlace(String id) async {
+    _items.removeAt(_items.indexWhere((item) => item.id == id));
+    notifyListeners();
+    DBHelper.delete(id);
   }
 
   Future<void> initialize() async {

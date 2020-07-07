@@ -43,10 +43,7 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        title: Text('Add a new place'),
-        excludeHeaderSemantics: true,
-      ),
+      appBar: AppBar(title: Text('Add a new place')),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
