@@ -73,7 +73,7 @@ class _LocationInputState extends State<LocationInput> {
             FlatButton.icon(
               onPressed: _getCurrentUserLocation,
               icon: Icon(Icons.location_on),
-              label: Text('Current Location'),
+              label: Text('Current'),
               textColor: Theme.of(context).primaryColor,
             ),
             FlatButton.icon(
