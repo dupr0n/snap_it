@@ -11,6 +11,10 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
     <key>NSPhotoLibraryUsageDescription</key>
+    <string>NSLocationWhenInUseUsageDescription</string>
+    <key>Give location when in use</key>
+    <string>NSLocationAlwaysUsageDescription</string>
+    <key>Give location always</key>
     <string>Wanna give acess to your gallery?</string>
     <key>NSCameraUsageDescription</key>
     <string>Wanna give acess to your camera?</string>
@@ -47,5 +51,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+    <key>io.flutter.embedded_views_preview<key>
+    <true/>
 </dict>
 </plist>
