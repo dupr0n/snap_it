@@ -23,6 +23,7 @@ class SnapIt extends StatelessWidget {
           primarySwatch: Colors.indigo,
           accentColor: Colors.amber,
         ),
+        onGenerateRoute: (settings) => PageRouteBuilder(pageBuilder: null),
         routes: {
           AddPlaceScreen.routeName: (_) => AddPlaceScreen(),
           PlaceDetailScreen.routeName: (_) => PlaceDetailScreen(),

@@ -16,8 +16,7 @@ class PlacesListScreen extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.add),
-            onPressed: () =>
-                Navigator.of(context).pushNamed(AddPlaceScreen.routeName),
+            onPressed: () => Navigator.of(context).pushNamed(AddPlaceScreen.routeName),
           )
         ],
       ),
@@ -44,8 +43,8 @@ class PlacesListScreen extends StatelessWidget {
                             context: context,
                             builder: (ctx) => AlertDialog(
                               title: Text('Are you sure?'),
-                              content: Text(
-                                  'This action will remove this snap from Snap It!'),
+                              content:
+                                  Text('This action will remove this snap from Snap It!'),
                               actions: <Widget>[
                                 FlatButton(
                                   child: Text('No'),
@@ -63,12 +62,14 @@ class PlacesListScreen extends StatelessWidget {
                             ),
                           ),
                           child: ListTile(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              side: BorderSide.none,
+                            ),
                             leading: CircleAvatar(
-                                backgroundImage:
-                                    FileImage(greatPlaces.items[i].image)),
+                                backgroundImage: FileImage(greatPlaces.items[i].image)),
                             title: Text(greatPlaces.items[i].title),
-                            subtitle:
-                                Text(greatPlaces.items[i].location.address),
+                            subtitle: Text(greatPlaces.items[i].location.address),
                             onTap: () {
                               Navigator.pushNamed(
                                 context,

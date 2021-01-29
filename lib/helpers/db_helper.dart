@@ -17,8 +17,7 @@ class DBHelper {
 
   static Future<void> insert(Map<String, Object> data) async {
     final db = await _database();
-    db.insert(tableName, data,
-        conflictAlgorithm: sql.ConflictAlgorithm.replace);
+    db.insert(tableName, data, conflictAlgorithm: sql.ConflictAlgorithm.replace);
   }
 
   static Future<void> delete(String id) async {
